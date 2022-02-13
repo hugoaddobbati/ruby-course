@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Minecraft";
+  src: url("/assets/Minecrafter");
+}
+
+body {
+  margin: 42px;
+}
+
+h1 {
+  font-family: "Minecraft", Gadget, sans-serif;
+}
+
+p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
