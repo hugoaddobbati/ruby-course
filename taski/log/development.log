@@ -1255,3 +1255,95 @@ Processing by PagesController#error as */*
 Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 3723)
 
 
+Started GET "/" for ::1 at 2022-02-13 05:38:31 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/views/shared/_projects.html.erb:1
+  Rendered shared/_projects.html.erb (Duration: 7.2ms | Allocations: 7115)
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.2ms | Allocations: 7791)
+  Rendered layout layouts/application.html.erb (Duration: 460.6ms | Allocations: 111387)
+Completed 500 Internal Server Error in 478ms (ActiveRecord: 0.9ms | Allocations: 118017)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/Hugo/ruby-course/taski/tmp/cache/assets/sprockets/v4.0.0/7r/7r9cSg3bdJFokoycCZFamRbaEVXObMoR6QPmJjEJBfg.cache.23340.18132.95276, C:/Users/Hugo/ruby-course/taski/tmp/cache/assets/sprockets/v4.0.0/7r/7r9cSg3bdJFokoycCZFamRbaEVXObMoR6QPmJjEJBfg.cache)):
+  
+sprockets (4.0.2) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.0.2) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.0.2) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.0.2) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.0.2) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.0.2) lib/sprockets/loader.rb:266:in `store_asset'
+sprockets (4.0.2) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.0.2) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.2) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.2) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.2) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.2) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.2) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.2) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.2) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.2) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.2) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.2) lib/sprockets/bundle.rb:32:in `block in call'
+C:/Ruby30-x64/lib/ruby/3.0.0/set.rb:344:in `each_key'
+C:/Ruby30-x64/lib/ruby/3.0.0/set.rb:344:in `each'
+sprockets (4.0.2) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.2) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.2) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.2) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.2) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.2) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.2) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.2) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.0.2) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.0.2) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:19:in `execute'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+concurrent-ruby (1.1.9) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+Started GET "/" for ::1 at 2022-02-13 05:38:43 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/views/shared/_projects.html.erb:1
+  Rendered shared/_projects.html.erb (Duration: 1.5ms | Allocations: 837)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 920)
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 397)
+  Rendered layout layouts/application.html.erb (Duration: 106.3ms | Allocations: 39324)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.2ms | Allocations: 39769)
+
+
+Started GET "/" for ::1 at 2022-02-13 05:38:45 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT ?[0m  [["LIMIT", 100]]
+  ↳ app/views/shared/_projects.html.erb:1
+  Rendered shared/_projects.html.erb (Duration: 1.5ms | Allocations: 756)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 839)
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4164)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 4532)
+
+
